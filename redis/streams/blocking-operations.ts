@@ -16,6 +16,8 @@ const blockingOperations = async (): Promise<void> => {
 
     console.log(JSON.stringify(newMessages));
   }
+
+  await redisClient.quit();
 }
 
 blockingOperations();

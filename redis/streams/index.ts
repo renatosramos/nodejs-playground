@@ -25,6 +25,8 @@ const streams = async (): Promise<void> => {
   await showStreamMessagesFilteredRevert();
   await showOnlyTwoMessagesOfTheStreamRevert();
 
+  await redisClient.quit();
+
   async function showAllStreamMessages() {
     const allStreamMessages = await redisClient.xRange(streamKey, "-", "+");
     console.log(`\n\n*** all messages on stream ***\n`);
