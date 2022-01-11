@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p .",
-    "start": "tsc -p . && node dist/index.js"
+    "start": "tsc -p . && node dist/index.js",
+    "start:blocking-op": "node dist/blocking-operations.js"
   },
   "devDependencies": {
     "@types/node": "^17.0.8",
